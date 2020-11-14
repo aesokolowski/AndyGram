@@ -18,7 +18,9 @@
             <div class="pt-5 font-weight-bold">
                 {{ $user->profile->title }}
             </div>
-            <div>{{ $user->profile->description }}</div>
+            <div>
+                {{ $user->profile->description }}
+            </div>
             <div><a href="{{ $user->profile->url }}">
                 {{ $user->profile->url }}
             </a></div>

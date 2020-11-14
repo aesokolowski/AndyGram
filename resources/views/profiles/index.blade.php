@@ -9,7 +9,10 @@
                  style="max-height: 175px;" />
         </div>
         <div class="col-9 pt-4">
-            <div><h1>{{ $user->userhandle }}</h1></div>
+            <div class="d-flex justify-content-between align-items-bottom">
+                <h1>{{ $user->userhandle }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>353</strong> posts</div>
                 <div class="pr-4"><strong>59.8k</strong> followers</div>

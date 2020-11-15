@@ -11,7 +11,7 @@
         <div class="col-9 pt-4">
             <div class="d-flex justify-content-between align-items-bottom">
                 <h1>{{ $user->userhandle }}</h1>
-                <a href="#">Add New Post</a>
+                <a href="/p/create">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-4"><strong>353</strong> posts</div>
@@ -26,20 +26,16 @@
             </div>
             <div><a href="{{ $user->profile->url }}">
                 {{ $user->profile->url }}
-            </a></div>
-        </div>
-    </div>
+            </a>
+        </div> {{-- col-9 pt-4 --}}
+    </div> {{-- row --}}
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img src="{{ URL::to('/') }}/img/greenjacket.png" class="w-100" />
-        </div>
-        <div class="col-4">
-            <img src="{{ URL::to('/') }}/img/thekids.jpg" class="w-100" />
-        </div>
+        @foreach($user->posts as $post)
         <div>
-            <img src="{{ URL::to('/') }}/img/ringsbaby.jpg" class="w-100" />
+            <img src="/storage/{{ $post->image }}" class="w-100" />
         </div>
+        @endforeach
     </div>
-</div>
+</div> {{-- container --}}
 @endsection

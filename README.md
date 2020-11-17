@@ -8,3 +8,5 @@ Following FreeCodeCamp's Laravel tutorial for Instagram clone at https://www.you
 6. Blade error handling uses different syntax, @error instead of @if and conditional (error block and class attribute, respectively).
 7. By the 1h:50m point of the tutorial (out of 4 and a half hours) I'm starting to deviate from the video in minor ways often enough I'm not going to bother adding changes to this file unless it's something significant, I might note it in a commit message.
 8. In ProfilesController I use array_merge inside the if(request('image')) block instead of outside of it.
+9. I put the default profile picture in /img/ instead of in /storage/ because I want it to be tracked by git
+10. Apparently he hit two snags in a row I did not hit but I credit that to note #8 above

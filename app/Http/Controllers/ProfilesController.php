@@ -35,7 +35,7 @@ class ProfilesController extends Controller
                 public_path("storage/{$imagePath}")
             )->fit(1000, 1000);
             $image->save();
-            array_merge($data, ['image' => $imagePath]);
+            $data = array_merge($data, ['image' => $imagePath]);
         }
 
         auth()->user()->profile->update($data);

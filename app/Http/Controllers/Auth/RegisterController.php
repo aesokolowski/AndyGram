@@ -71,9 +71,12 @@ class RegisterController extends Controller
             'userhandle' => $data['userhandle'],
             'password' => Hash::make($data['password'])
         ]);
+
+        /* commenting out for now because of switch to Model Event method
         $user->profile()->create([
             'user_id' => $user->id
         ]);
+        */
 
         return $user;
     }

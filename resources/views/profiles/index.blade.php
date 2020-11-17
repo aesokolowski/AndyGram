@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="{{ URL::to('/') }}/svg/quicklogo.svg"
-                 class="rounded-circle"
+            <img src="/storage/{{ $user->profile->image }}"
+                 class="rounded-circle w-100"
                  style="max-height: 175px;" />
         </div>
-        <div class="col-9 pt-4">
+         <div class="col-9 pt-4">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->userhandle }}</h1>
                 @can('update', $user->profile)

@@ -9,10 +9,16 @@
                  style="max-height: 175px;" />
         </div>
         <div class="col-9 pt-4">
-            <div class="d-flex justify-content-between align-items-bottom">
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->userhandle }}</h1>
+                @can('update', $user->profile)
                 <a href="/p/create">Add New Post</a>
+                @endcan
+
             </div>
+            @can('update', $user->profile)
+            <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
+            @endcan
             <div class="d-flex">
                 <div class="pr-4">
                     <strong>{{ $user->posts->count() }}</strong> posts

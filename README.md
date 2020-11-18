@@ -11,3 +11,4 @@ Following FreeCodeCamp's Laravel tutorial for Instagram clone at https://www.you
 9. I put the default profile picture in /img/ instead of in /storage/ because I want it to be tracked by git
 10. Apparently he hit two snags in a row I did not hit but I credit that to notes #7 and #8 above
 11. Different method to alter my Follow button on profile.index
+12. async await instead of .then

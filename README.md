@@ -12,4 +12,4 @@ Following FreeCodeCamp's Laravel tutorial for Instagram clone at https://www.you
 10. Apparently he hit two snags in ia row I did not hit but I credit that to notes #7 and #8 above
 11. Different method to alter my Follow button on profile.index
 12. async await instead of .then
-13. Use v-bind and v-on instead of Vue shorthands (in the video's case I think he simply wrote the prop name like a normal attribute), preference since I'm new to Vue I want to always be reminded when I'm looking at Vue stuff
+13. Use v-bind and v-on instead of Vue shorthands (in the video's case I think he simply wrote the prop name like a normal attribute, I assume that's an older version of Vue?), preference since I'm new to Vue I want to always be reminded when I'm looking at Vue stuff

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-primary ml-4 ptb-1" @click="followUser">
+        <button class="btn btn-primary ml-4 ptb-1" v-on:click="followUser">
             Follow
         </button>
     </div>

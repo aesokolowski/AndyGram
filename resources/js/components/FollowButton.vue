@@ -15,7 +15,7 @@
         methods: {
             async followUser() {
                 const response = await axios.post('/follow/' + this.userId);
-                alert(response.data);
+                console.log(response.data);
             }
         }
     }

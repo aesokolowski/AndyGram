@@ -1956,7 +1956,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 response = _context.sent;
-                alert(response.data);
+                console.log(response.data);
 
               case 4:
               case "end":

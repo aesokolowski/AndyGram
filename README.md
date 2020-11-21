@@ -13,3 +13,4 @@ Following FreeCodeCamp's Laravel tutorial for Instagram clone at https://www.you
 11. Different method to alter my Follow button on profile.index
 12. async await instead of .then
 13. Use v-bind and v-on instead of Vue shorthands (in the video's case I think he simply wrote the prop name like a normal attribute, I assume that's an older version of Vue?), preference since I'm new to Vue I want to always be reminded when I'm looking at Vue stuff
+14. Creating ProfileUser model myself acted the same way, I couldn't do $profiles = ProfileUser::all(); like with a regular model. I've wasted enough hours trying to get the $user->following thing to work but he must have some library installed that I don't, because I do not see anything about that kind of thing working in the documentation. For accessing pivot table I'll hack something together.

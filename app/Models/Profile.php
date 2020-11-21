@@ -17,7 +17,7 @@ class Profile extends Model
     ];
 
     public function followers() {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)->using(UserProfile);
     }
 
     public function profileImage()
@@ -29,6 +29,6 @@ class Profile extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class);
     } 
 }

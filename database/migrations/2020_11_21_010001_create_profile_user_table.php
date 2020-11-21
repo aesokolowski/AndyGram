@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfileUserPivotTable extends Migration
+class CreateProfileUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,13 @@ class CreateProfileUserPivotTable extends Migration
     public function up()
     {
         Schema::create('profile_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('profile_id');
-            $table->unsignedBigInteger('user_id');
+            $table->id();
+            $table->unsignedBigInteger('profile_id')->index();
+            $table->foreign('profile_id')->references('id')->on('profiles')->
+                    onDelete('cascade');
+            $table->unsignedBigInteger('user_id')->index();
+            $table->foreign('user_id')->references('id')->on('users')->
+                    onDelete('cascade');
             $table->timestamps();
         });
     }

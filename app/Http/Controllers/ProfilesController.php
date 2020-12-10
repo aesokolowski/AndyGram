@@ -10,7 +10,21 @@ class ProfilesController extends Controller
 {
     public function index(User $user)
     {
-        return view('profiles.index', compact('user'));
+        $follows = 'BOOL_FALSE';
+
+        if (auth()->user()) {
+            $status = auth()->user()->following->contains($user->id);
+            if ($status) {
+                $follows = 'BOOL_TRUE';
+            }
+        }
+/*
+        $follows = (auth()->user())
+            ? auth()->user()->following->contains($user->id)
+            : 'BOOL_FALSE';
+*/
+
+        return view('profiles.index', compact('user', 'follows'));
     }
 
     public function edit(User $user)

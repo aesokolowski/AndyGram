@@ -12,7 +12,9 @@
             <div class="d-flex justify-content-between align-items-baseline pb-3">
                 <div class="d-flex align-items-center">
                     <h1>{{ $user->userhandle }}</h1>
-                    <follow-button v-bind:user-id="{{ $user->id }}">
+                    <follow-button 
+                        v-bind:user-id="{{ $user->id }}"
+                        v-bind:follows='@json($follows)'>
                     </follow-button>
                 </div>
 
